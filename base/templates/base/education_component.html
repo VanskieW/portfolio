@@ -1,0 +1,14 @@
+<h3 class="resume-title">Education</h3>
+          <a href="{% url 'add-education' %}">Add Education</a>
+{% for education in educations %}
+          <div class="resume-item">
+
+            <h4>{{education.qualification}}</h4>
+            <h5>{{education.start_date}} - {{education.end_date}}</h5>
+            <p><em>{{education.institution}} </em></p>
+            <ul>
+              <li>{{education.grade}}</li>
+              
+            </ul>
+          </div>
+          {% endfor %}

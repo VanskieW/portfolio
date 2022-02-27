@@ -1,0 +1,14 @@
+<h3 class="resume-title">Professional Experience</h3>
+          <a href="{% url 'add-experience' %}">Add Experience</a>
+{% for experience in experiences %}
+          <div class="resume-item">
+
+            <h4>{{experience.title}}</h4>
+            <h5>{{experience.start_date}} - {{experience.end_date}}</h5>
+            <p><em>{{experience.company}} </em></p>
+            <ul>
+              <li>{{experience.roles}}</li>
+              
+            </ul>
+          </div>
+  {% endfor %}
